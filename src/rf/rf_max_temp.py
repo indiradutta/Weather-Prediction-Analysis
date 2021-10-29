@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
 import datetime
+import pickle
 
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import mean_squared_error
+
+df = pd.read_csv('/data/data.csv')
 
 le = preprocessing.LabelEncoder()
 df['weather'] = le.fit_transform(df['weather'])
@@ -20,5 +22,6 @@ x1 = scaler.fit_transform(x1)
 
 rf = RandomForestClassifier(n_estimators=10, criterion='gini')
 rf.fit(x1,y1)
-y1_pred = rf.predict(x1)
-mean_squared_error(y1, y1_pred)
+
+filename = 'rf_model_maxtemp.pkl'
+pickle.dump(rf, open(filename, 'wb'))

@@ -7,6 +7,8 @@ from keras.layers import Dense
 
 from sklearn import preprocessing
 
+df = pd.read_csv('/data/data.csv')
+
 le = preprocessing.LabelEncoder()
 df['weather'] = le.fit_transform(df['weather'])
 origin = datetime.datetime(2017,4,1)
@@ -25,4 +27,4 @@ model.add(Dense(4, activation="relu"))
 model.add(Dense(1, activation="linear"))
 model.compile(loss='mean_squared_error', optimizer='adam')
 model.fit(x2,y2, epochs=100, batch_size=10)
-model.save('/models/ann_model_mintemp.h5')
+model.save('/cmodel/ann_model_mintemp.h5')

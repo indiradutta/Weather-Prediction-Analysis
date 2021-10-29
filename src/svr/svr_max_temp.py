@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
 import datetime
+import pickle
 
 from sklearn import preprocessing
 from sklearn.svm import SVR
-from sklearn.metrics import mean_squared_error
+
+df = pd.read_csv('/data/data.csv')
 
 le = preprocessing.LabelEncoder()
 df['weather'] = le.fit_transform(df['weather'])
@@ -20,5 +22,5 @@ x1 = scaler.fit_transform(x1)
 
 regressor = SVR(kernel='rbf')
 regressor.fit(x1,y1)
-y1_pred_svr = regressor.predict(x1)
-mean_squared_error(y1, y1_pred_svr)
+filename = 'svr_model_maxtemp.pkl'
+pickle.dump(regressor, open(filename, 'wb'))
