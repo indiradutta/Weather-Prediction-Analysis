@@ -14,7 +14,7 @@ origin = datetime.datetime(2017,4,1)
 for i in range(len(list(df['Date']))):
   df['Date'][i] = (datetime.datetime.strptime(df['Date'][i], '%d.%m.%Y') - origin).days
 
-x1 = df[["Date", "mintemp", "pressure", "humidity", "mean wind speed", "weather"]].values
+x1 = df[["Date", "pressure", "humidity", "mean wind speed", "weather"]].values
 y1 = df["maxtemp"].values
 
 scaler = preprocessing.StandardScaler()
