@@ -19,10 +19,10 @@ y1 = df["maxtemp"].values
 
 scaler = preprocessing.StandardScaler()
 x1 = scaler.fit_transform(x1)
-x1 = x1.reshape(-1, 1, 6)
+x1 = x1.reshape(-1, 1, 5)
 
 regressor = Sequential()
-regressor.add(GRU(6, input_shape=(1,6), return_sequences=True))
+regressor.add(GRU(6, input_shape=(1,5), return_sequences=True))
 regressor.add(Dense(4, activation="relu"))
 regressor.add(Dense(1, activation="linear"))
 regressor.compile(optimizer='adam',loss='mean_squared_error')
