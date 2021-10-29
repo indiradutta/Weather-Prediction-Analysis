@@ -57,7 +57,7 @@ elif data[4] == 'Smoke':
 scaler = StandardScaler()
 data = scaler.fit_transform([data])
 
-st.write(data.shape)
+#st.write(data.shape)
 
 if st.button('Predict'):
 
