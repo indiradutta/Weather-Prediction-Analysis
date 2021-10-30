@@ -42,6 +42,12 @@ To use the repo and run inferences, please follow the guidelines below
 ### Minimum Temperature
 ![table2](https://user-images.githubusercontent.com/66861243/139520666-81148d27-bb9a-4ab1-9227-77cfe3d347c3.png)
 
+## Deployment
+
+ANN | GRU | 
+:-------------: | :---------: |
+![rf-op](https://user-images.githubusercontent.com/66861242/139521021-bad6aeab-2533-40a2-8de5-2cad06790c03.png) | ![gru-op](https://user-images.githubusercontent.com/66861242/139521020-6848d1b5-b1ec-41a1-b365-2978de698eeb.png)|
+
 ## Conclusion
 We have concluded the following from the losses obtained -
 
