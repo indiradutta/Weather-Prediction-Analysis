@@ -33,3 +33,18 @@ To use the repo and run inferences, please follow the guidelines below
 - Running the file for inference:
 
         $ streamlit run main.py
+
+## Result
+
+### Maximum Temperature
+![table1](https://user-images.githubusercontent.com/66861243/139520642-e2f8e1ab-d93e-44d2-b8b1-5a4ff10cc74c.png)
+
+### Minimum Temperature
+![table2](https://user-images.githubusercontent.com/66861243/139520666-81148d27-bb9a-4ab1-9227-77cfe3d347c3.png)
+
+## Conclusion
+We have concluded the following from the losses obtained -
+
+- Random Forest performs the best for both maximum and minimum temperature prediction as it has the least value for both the losses.
+- SVR and GRU are fairly similar with respect to their performances.
+- ANN has the highest loss value for both cases hence it is the worst fit for weather prediction.
